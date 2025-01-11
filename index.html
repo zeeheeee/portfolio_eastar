@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>EastarJet - 이스타항공</title>
+     
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+    
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+<body>
+    <!-- 메인 컨텐츠 시작 -->
+    <div class="contents">
+        <!-- 탑 컨텐츠(배너, 탭) 시작 -->
+        <div class="top_ct">
+            <div class="nav">
+                <a href="main.html" class="logo"></a>
+                <div class="nav_wrap"></div>
+                <ul class="nav_full">
+                    <li class="first-nav"><a href="flight.html">항공권 예매</a>
+                        <ul>
+                            <li><a href>항공권</a>
+                            <ul>
+                                <li><a href="flight.html">항공권 예매</a></li>
+                                <li><a href>최저가항공권</a></li>
+                                <li><a href>가격으로 조회</a></li>
+                            </ul>
+                            </li>
+                            <li><a href>운항정보</a>
+                                <ul>
+                                    <li><a href>노선별 운항 시간표</a></li>
+                                    <li><a href>실시간 출도착</a></li>
+                                    <li><a href>운항 노선도</a></li>
+                                </ul>
+                            </li>
+                            <li><a href>부가서비스 구매</a>
+                                <ul>
+                                    <li><a href>지정좌석 구매</a></li>
+                                    <li><a href>위탁수하물 사전구매</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="first-nav"><a href>나의 예매</a></li>
+                    <li class="first-nav"><a href>서비스 안내</a>
+                        <ul>
+                            <li><a href>항공권서비스</a>
+                                <ul>
+                                    <li><a href>국내선 운임</a></li>
+                                    <li><a href>국제선 운임</a></li>
+                                    <li><a href="flight.html">항공권 예매</a></li>
+                                    <li><a href>항공권 변경/취소</a></li>
+                                    <li><a href>온라인 체크인</a></li>
+                                </ul>
+                            </li>
+                            <li><a href>공항서비스</a>
+                                <ul>
+                                    <li><a href>탑승수속 서비스</a></li>
+                                    <li><a href>셀프 체크인</a></li>
+                                    <li><a href>수하물 서비스</a></li>
+                                    <li><a href>분실수하물 찾기</a></li>
+                                    <li><a href>도움이 필요한 고객</a></li>
+                                    <li><a href>국내선 탑승수속 혼잡도</a></li>
+                                    <li><a href>주차장 혼잡도</a></li>
+                                </ul>
+                            </li>
+                            <li><a href>기내 서비스</a>
+                                <ul>
+                                    <li><a href>기내 면세품</a></li>
+                                    <li><a href>기내 유료상품</a></li>
+                                    <li><a href>기내 서비스</a></li>
+                                </ul>
+                            </li>
+                            <li><a href>부가서비스</a>
+                                <ul>
+                                    <li><a href>지정좌석 안내</a></li>
+                                    <li><a href>위탁수하물 안내</a></li>
+                                    <li><a href>취소/환불</a></li>
+                                    <li><a href>사전주문기내식</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="first-nav"><a href>제휴상품</a>
+                        <ul>
+                            <li><a href>여행자보험/비자(중국)</a></li>
+                            <li><a href>호텔</a></li>
+                            <li><a href>렌터카</a></li>
+                            <li><a href>어트랙션</a></li>
+                        </ul>
+                    </li>
+                    <li class="first-nav"><a href="notice.html">고객센터</a>
+                        <ul>
+                            <li><a href>이벤트</a></li>
+                            <li><a href="notice.html">공지사항</a>
+                                <ul>
+                                    <li><a href="notice.html">공지사항</a></li>
+                                    <li><a href>자주 묻는 질문</a></li>
+                                    <li><a href>고객의 말씀</a></li>
+                                    <li><a href>제휴문의</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="first-nav"><a href>별별스토어</a></li>
+                </ul>
+                <div class="nav_button">
+                    <img src="img/menu.png">
+                    <div class="small_nav">
+                        <div class="small_nav_top">
+                            <span>
+                                <img src="img/store.png" alt="">
+                                별별스토어
+                            </span>
+                            <img src="img/close.png" alt="">
+                        </div>
+                        <hr>
+                        <ul>
+                            <li><a href="#">항공권 예매</a>
+                                <ul class="small_nav_sub">
+                                    <li><a href="#">항공권</a></li>
+                                    <li><a href="#">운항정보</a></li>
+                                    <li><a href="#">부가서비스 구매</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">나의 예매</a></li>
+                            <li><a href="#">서비스 안내</a>
+                                <ul class="small_nav_sub">
+                                    <li><a href="#">항공권서비스</a></li>
+                                    <li><a href="#">공항서비스</a></li>
+                                    <li><a href="#">기내 서비스</a></li>
+                                    <li><a href="#">부가서비스</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">제휴상품</a>
+                                <ul class="small_nav_sub">
+                                    <li><a href="#">여행자보험/비자(중국)</a></li>
+                                    <li><a href="#">호텔</a></li>
+                                    <li><a href="#">렌터카</a></li>
+                                    <li><a href="#">어트랙션</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">고객센터</a>
+                                <ul class="small_nav_sub">
+                                    <li><a href="#">이벤트</a></li>
+                                    <li><a href="#">공지사항</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <span>회원가입 | 로그인</span>
+                    </div>
+                </div>  
+            </div>
+            <div class="top_banner"></div>
+            <div class="top_tab">
+                <div class="button">
+                    <button class="selected">왕복</button>
+                    <button>편도</button>
+                    <button>다구간</button>
+                </div>
+                <div class="location" id="lc1"><span>출발지</span><span>FROM</span></div>
+                <div class="location" id="lc2"><span>도착지</span><span>TO</span></div>
+                <div class="info">
+                    <div class="date">가는날 ~ 오는날</div>
+                    <div class="person">성인 1</div>
+                </div>
+                <div class="etc">
+                    <p>단체항공권 신청</p>
+                    <p>기프트 항공권 예매</p>
+                    <p>나의 예매 내역</p>
+                </div>
+            </div>
+            <div class="tablet_top_tab">
+                <h1>항공권 예매</h1>
+                <div class="type">
+                    <span class="selected">왕복</span>
+                    <span>편도</span>
+                    <span>다구간</span>
+                </div>
+                <div class="tablet_lc">
+                    <div class="location" id="lc1">
+                        <span>출발지</span>
+                        <span>FROM</span>
+                    </div>
+                    <div class="swap">
+                        <img src="img/tablet_swap.png" alt="">
+                    </div>
+                    <div class="location" id="lc1">
+                        <span>도착지</span>
+                        <span>TO</span>
+                    </div>
+                </div>
+                <hr>
+                <div class="detail date">
+                    <p>여행일정</p>
+                    <div class="date_info">
+                        <div></div>
+                        <span>가는날~오는날</span>
+                        <img src="img/tablet_calendar.png" alt="">
+                    </div>
+                </div>
+                <hr>
+                <div class="detail person">
+                    <p>탑승객</p>
+                    <div class="person_info">
+                        <div></div>
+                        <span>성인 1</span>
+                        <img src="img/tablet_person.png" alt="">
+                    </div>
+                </div>
+                <hr>
+                <span class="search_btn">항공편 검색</span>
+            </div>
+        </div>
+        <!-- 탑 컨텐츠(배너, 탭) 끝 -->
+
+        <!-- 미들 컨텐츠(항공특가, 뉴스) 시작 -->
+        <div class="md_ct">
+            <!-- 최저가 항공 특가 시작 -->
+            <div class="promotion" data-aos="fade-up">
+                <h1>최저가 항공 특가</h1>
+                <div class="accordion">
+                    <div class="accordion-item" style="background-image: url('img/cebu.png');">
+                        <div class="ac_overlay"></div>
+                        <div class="text">
+                            <p>서울 / 인천 ↔ 세부</p>
+                            <p>왕복 <span>KRW </span><span class="price">362,100</span><span>~</span></p>
+                        </div>
+                    </div>
+                    <div class="accordion-item" style="background-image: url('img/frankfurt.png');">
+                        <div class="ac_overlay"></div>
+                        <div class="text">
+                            <p>서울 / 인천 ↔ 프랑크프루트</p>
+                            <p>왕복 <span>KRW </span><span class="price">1,208,000</span><span>~</span></p>
+                        </div>
+                    </div>
+                    <div class="accordion-item" style="background-image: url('img/hochiminh.png');">
+                        <div class="ac_overlay"></div>
+                        <div class="text">
+                            <p>서울 / 인천 ↔ 호치민</p>
+                            <p>왕복 <span>KRW </span><span class="price">368,700</span><span>~</span></p>
+                        </div>
+                    </div>
+                    <div class="accordion-item" style="background-image: url('img/losangeles.png');">
+                        <div class="ac_overlay"></div>
+                        <div class="text">
+                            <p>서울 / 인천 ↔ 로스앤젤레스</p>
+                            <p>왕복 <span>KRW </span><span class="price">1,448,900</span><span>~</span></p>
+                        </div>
+                    </div>
+                    <div class="accordion-item" style="background-image: url('img/osaka.png');">
+                        <div class="ac_overlay"></div>
+                        <div class="text">
+                            <p>서울 / 인천 ↔ 오사카</p>
+                            <p>왕복 <span>KRW </span><span class="price">304,500</span><span>~</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 최저가 항공 특가 끝 -->
+            <!-- 뉴스 시작 -->
+            <div class="news" data-aos="fade-up">
+                <div class="news_left">
+                    <span>News</span>
+                    <span><span style="color: #D30E18;">소식</span>을　　알려드려요</span>
+                    <a href="notice.html" class="news_more">공지사항 바로가기
+                        <img src="img/arrow-right.png" style="width: 20px; height: 20px; margin: 0 -10px 3px -10px;">
+                    </a>
+                </div>
+                <div class="news_right">
+                    <div class="news_ct">
+                        <span class="news_title important">이스타항공 동남아노선 운항시각 변경 안내(인천-치앙마이)</span>
+                        <span class="news_date">2024-07-31</span>
+                    </div>
+                    <div class="news_info">이스타항공에서 아래와 같이 동남아노선 운항 시각 변경 안내 드립니다.
+                        <br>
+                        (1) 인천 - 치앙마이 : ZE517 인천(ICN) - 치앙마이(CNX) |
+                        (2) 치앙마이 - 인천 : ZE518 치앙마이(CNX) - 인천(ICN)
+                    </div>
+                    <div class="news_ct">
+                        <span class="news_title">이스타항공 동남아노선 운항시각 변경 안내(인천-푸꾸옥)</span>
+                        <span class="news_date">2024-07-03</span>
+                    </div>
+                    <div class="news_ct">
+                        <span class="news_title important">국제여객운송약관 개정 안내</span>
+                        <span class="news_date">2024-07-01</span>
+                    </div>
+                </div>
+            </div>
+            <!-- 뉴스 끝 -->
+        </div>
+        <!-- 미들 컨텐츠(항공특가, 뉴스) 끝 -->
+        <!-- 바텀 컨텐츠(이벤트, 서비스, 카테고리) 시작 -->
+        <div class="bt_ct" data-aos="fade-up">
+            <div class="bt_banner">
+                <div class="event">
+                    <div class="event_top">
+                        <span>EVENT</span>
+                        <div class="control">
+                            <div class="stop"></div>
+                        </div>
+                    </div>
+                    <div class="event_slider">
+                        <div class="autoplay">
+                            <div class="event_ct"><img src="img/event_ct_1.png"></div>
+                            <div class="event_ct"><img src="img/event_ct_2.png"></div>
+                            <div class="event_ct"><img src="img/event_ct_3.png"></div>
+                            <div class="event_ct"><img src="img/event_ct_4.png"></div>
+                            <div class="event_ct"><img src="img/event_ct_5.png"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="service">
+                    <span>Service</span>
+                    <div class="service_ct">
+                        <div class="service_ct_left"></div>
+                        <div class="service_ct_right"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="category"></div>
+        </div>
+        <!-- 바텀 컨텐츠(이벤트, 서비스, 카테고리) 끝 -->
+    </div>
+    <!-- 메인 컨텐츠 끝 -->
+
+    <!-- 푸터 컨텐츠 시작 -->
+    <footer class="desktop">
+        <div class="site_map">
+            <div class="top">
+                <div>
+                    <span>예약문의</span>
+                    <span style="font-weight: bold;">1544.0080</span>
+                    <span>매일 09:00 ~ 18:00 연중무휴</span>
+                </div>
+                <div>
+                    <span>별별배송 구매문의</span>
+                    <span style="font-weight: bold;">1533-3458</span>
+                    <span>평일 09:00 ~ 18:00</span>
+                </div>
+                <div>
+                    <p>고객의 말씀</p>
+                    <span>365일 운영시간에<br>순차적으로 답변 드리겠습니다.</span>
+                </div>
+                <div style="margin-right: 240px;">
+                    <span>이스타항공 SNS</span>
+                    <span class="sns_link">
+                        <a href="#"></a>
+                        <a href="#"></a>
+                        <a href="#"></a>
+                        <a href="#"></a>
+                    </span>
+                </div>
+            </div>
+            <hr>
+            <div class="middle">
+                <div>
+                    <span>항공권 예매</span>
+                    <span>항공권 예매</span>
+                    <span>최저가항공권</span>
+                    <span>가격으로 조회</span>
+                    <div style="margin-top: 50px; margin-bottom: 40px;">
+                        <span>기내 및 부가 서비스</span>
+                        <span>지정좌석 안내</span>
+                        <span>위탁수하물 안내</span>
+                        <span>부가서비스 취소/환불</span>
+                        <span>사전주문기내식</span>
+                        <span>기내 면세품</span>
+                        <span>기내 유료상품</span>
+                        <span>기내 서비스</span>
+                    </div>
+                </div>
+                <div>
+                    <span>운항 정보</span>
+                    <span>노선별 운항 시간표</span>
+                    <span>실시간 출도착</span>
+                    <span>운항 노선도</span>
+                </div>
+                <div>
+                    <span>서비스 안내</span>
+                    <span>국내선 운임</span>
+                    <span>국제선 운임</span>
+                    <span>항공권 예매</span>
+                    <span>항공권 변경/취소</span>
+                    <span>온라인 체크인</span>
+                    <span>탑승수속 서비스</span>
+                    <span>셀프 체크인</span>
+                    <span>수하물 서비스</span>
+                    <span>분실 수하물 찾기</span>
+                    <span>도움이 필요한 고객</span>
+                </div>
+                <div>
+                    <span>제휴상품</span>
+                    <span>여행자보험/비자(중국)</span>
+                    <span>호텔</span>
+                    <span>렌터카</span>
+                    <span>어트랙션</span>
+                </div>
+                <div>
+                    <span>고객센터</span>
+                    <span>공지사항</span>
+                    <span>자주 묻는 질문</span>
+                    <span>고객의 말씀</span>
+                    <span>제휴문의</span>
+                    <span>이용약관</span>
+                    <div style="margin-top: 50px;">
+                        <span>여행사전용 E-AGENCY</span>
+                    </div>
+                </div>
+                <div style="margin-right: 100px;">
+                    <span>이벤트 존</span>
+                    <span>이벤트</span>
+                </div>
+            </div>
+        </div>
+        <div class="desktop_footer_info">
+            <div class="top">
+                <span>회사소개</span>
+                <span>이용약관</span>
+                <span>국내여객운송약관</span>
+                <span>국제여객운송약관</span>
+                <span>국제화물운송약관</span>
+                <span>항공교통이용자 서비스 계획</span>
+                <span>항공교통이용자 피해구제</span>
+                <span style="font-weight: bold;">개인정보처리방침</span>
+                <span>항공안전투자공사</span>
+                <span>사이트맵</span>
+            </div>
+            <hr>
+            <div class="bottom">
+                <img src="https://zeimage.eastarjet.com/newstar/images/new/eastarjet_logo2.png" style="height: 55px;">
+                <div class="bottom_txt">
+                    <span>이스타항공(주) 대표이사 조중석 | 사업자 등록번호 401-81-32460 | 서울특별시 강서구 공항대로 236 이스타항공(주)</span>
+                    <span>FAX 02-2665-7470 | 통신판매업 신고번호 2008-전북군산-0073호 | 개인정보보호책임자 .이경민</span>
+                    <span>COPYRIGHT © 2022 EASTARJET. ALL RIGHTS RESERVED</span>
+                </div>
+                <div style="width: 30%; display: flex; align-items: center;">
+                    <img src="https://zeimage.eastarjet.com/newstar/images/ISMS_ICO1.png" style="width: 60px; height: 60px; border-radius: 30px; background-color: white;">
+                    <div class="bottom_txt" style="margin-left: 20px;">
+                        <span>[인증범위]</span>
+                        <span>인터넷 항공권 예약 발권 및 고객 서비스 운영</span>
+                        <span>[유효기간] 2024.06.05 ~ 2027.06.04</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <footer class="tablet">
+        <div class="tb_ft_top">
+            <img src="img/eastar_logo.png" alt="">
+            <strong>Let's Fly Again, EASTAR!</strong>
+        </div>
+        <hr>
+        <div class="tb_ft_detail">
+            <span>개인정보처리방침</span>
+            <div>
+                <span class="info_name">주소</span>
+                <span>서울특별시 강서구 공항대로 236 이스타항공(주)</span>
+            </div>
+            <div>
+                <span class="info_name">대표번호</span>
+                <span>1544-0080</span>
+            </div>
+            <div>
+                <span class="info_name">FAX</span>
+                <span>02-2665-7470</span>
+            </div>
+            <span class="copyright">COPYRIGHT © 2022 EASTARJET. ALL RIGHTS RESERVED</span>
+        </div>
+        <div class="tb_ft_sns">
+            <div class="sns_img">
+                <img src="img/instagram.png" alt="">
+            </div>
+            <div class="sns_img">
+                <img src="img/youtube.png" alt="">
+            </div>
+            <div class="sns_img">
+                <img src="img/blog.png" alt="">
+            </div>
+            <div class="sns_img">
+                <img src="img/facebook.png" alt="">
+            </div>
+        </div>
+    </footer>
+    <!-- 푸터 컨텐츠 끝 -->
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="main.js"></script>
+
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>

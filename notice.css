@@ -1,0 +1,493 @@
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+    font-family: 'GmarketSansMedium';
+    width: calc(100vw - (100vw - 100%));
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    color: #332E2E;
+    letter-spacing: -0.8px;
+    box-sizing: border-box;
+}
+
+ul, li{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.contents > .top_ct{
+    width: 100%; height: 585px;
+}
+
+.contents > .top_ct > .nav{
+    width: 100%; height: 85px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.5s ease;
+}
+
+.contents > .top_ct > .nav > .logo{
+    background-image: url(img/eastar_logo.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 188px; height: 41px;
+    margin: 0 100px 10px 50px;
+    z-index: 3;
+}
+
+.contents > .top_ct > .nav > .nav_wrap{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; height: 400px;
+    opacity: 0;
+    transition: all 0.3s ease;
+    background: rgba( 255, 255, 255, 0.7 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 7.5px );
+    -webkit-backdrop-filter: blur( 7.5px );
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+.contents > .top_ct > .nav > .nav_wrap.is-hover{
+    opacity: .9;
+}
+
+.contents > .top_ct > .nav.is-hover a{
+    color: #332E2E;
+    transition: all 0.5s ease;
+}
+
+.contents > .top_ct > .nav > ul{
+    display: flex;
+    position: relative;
+}
+
+.contents > .top_ct > .nav > ul > li{
+    width: 150px;
+    display: flex;
+    font-weight: bold;
+    font-size: 1.1rem;
+    position: relative;
+    justify-content: center;
+}
+
+.contents > .top_ct > .nav > ul > li > a::after{
+    position: absolute;
+    margin-top: 20px;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    content: "";
+    width: 0; height: 2px;
+    background-color: #332E2E;
+    transition: all .3s;
+}
+
+.contents > .top_ct > .nav > ul > li > ul{
+    display: none;
+}
+
+.contents > .top_ct > .nav > ul > li:hover > a::after{
+    width: 100px;
+    transition: all .3s;
+}
+
+.contents > .top_ct > .nav > ul > li.is-hover > ul{
+    display: block;
+    position: fixed;
+    top: 10%;
+    right: 13%;
+    display: flex;
+    font-size: 1.05rem;
+    margin: 10px 0;
+    transition: all 0.5s ease;
+}
+
+.contents > .top_ct > .nav > ul > li > ul > li{
+    width: 200px;
+    text-align: right;
+}
+
+.contents > .top_ct > .nav > ul > li > ul > li > ul{
+    font-size: 0.9rem;
+    font-weight: 400;
+    margin: 10px 0;
+    color: #474242;
+}
+
+.contents > .top_ct > .nav > ul > li > ul > li > ul > li{
+    margin: 10px 0;
+}
+
+.contents > .top_ct > .nav > ul > li > ul > li > ul > li:hover{
+    text-decoration: underline;
+}
+
+.contents > .top_ct > .banner{
+    width: 100%; height: 585px;
+    background-image: url(img/notice_banner.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;
+}
+
+.contents > .top_ct > .banner > .wrap{
+    position: absolute;
+    top: 53%;
+    left: 16%;
+    transform: translateY(-50%);
+    font-size: 2.6rem;
+    font-weight: bold;
+    color: white;
+    line-height: 60px;
+}
+
+.contents > .top_ct > .banner > .wrap > .eng{
+    font-size: 1.7rem;
+    font-weight: 400;
+    display: inline-block;
+    line-height: 80px;
+}
+
+.contents > .top_ct > .banner > .top_tab{
+    width: 80%; height: 70px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+.contents > .top_ct > .banner > .top_tab > span{
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    cursor: pointer;
+    background-color: rgba( 255, 255, 255, 0.7 );
+    box-sizing: border-box;
+}
+
+.contents > .top_ct > .banner > .top_tab > span:not(:first-child):hover{
+    background-color: rgba(185, 185, 185, 0.7);
+}
+
+.contents > .top_ct > .banner > .top_tab > span:first-child{
+    font-weight: bold;
+    background-color: #D30E18;
+    color: white;
+    border-radius: 50px 0 0 0;
+}
+
+.contents > .top_ct > .banner > .top_tab > span:last-child{
+    border-radius: 0 50px 0 0;
+}
+
+.contents > .md_ct{
+    width: 80%;
+    margin: 0 auto;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.contents > .md_ct > .notice_top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.contents > .md_ct > .notice_top > span{
+    font-family: 'GmarketSansMedium';
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.contents > .md_ct > .notice_top > div{
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+.contents > .md_ct > .notice_top > div > img{
+    width: 27px; height: 27px;
+    margin-right: 7px;
+}
+
+.contents > .md_ct > .notice_select_box{
+    width: 100%; height: 60px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #332e2e21;
+    border-radius: 3px;
+}
+
+.contents > .md_ct > .notice_select_box > select{
+    margin-left: 2%;
+    width: 7%; height: 30px;
+    font-family: 'Noto Sans KR', sans-serif;
+    border: 1px solid #d6d3d3;
+    color: #332E2E;
+    border-radius: 5px;
+}
+
+.contents > .md_ct > .notice_select_box > input{
+    width: 80%; height: 30px;
+    font-family: 'Noto Sans KR', sans-serif;
+    border: 1px solid #d6d3d3;
+    color: #332E2E;
+    border-radius: 5px;
+    padding-left: 13px;
+}
+
+.contents > .md_ct > .notice_select_box > button{
+    margin-right: 2%;
+    width: 7%; height: 30px;
+    font-family: 'Noto Sans KR', sans-serif;
+    border: 1px solid #d6d3d3;
+    color: white;
+    background-color: #D30E18;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.contents > .md_ct > .notice_select_box > button:active{
+    background-color: #9b0d14;
+}
+
+.table-default, .board_list {
+    position: relative;
+    width: 100%;
+    margin: 50px 0 15px 0;
+    border-top: none;
+    text-align: center;
+    border-top: 2px solid #aa484d;
+}
+
+.table-default thead th, .board_list thead th {
+    position: relative;
+    padding: 15px 11px;
+    border-bottom: 1px solid #e5e7ee;
+    background: #fff;
+    text-align: center;
+    font-weight: bold;
+    vertical-align: middle;
+    word-break: keep-all;
+}
+
+.table td, .table th {
+    padding: 14px 9px;
+    margin-left: -1px;
+    border-bottom: 1px solid #d2d2d2;
+    word-wrap: break-word;
+    word-break: break-all;
+    word-break: keep-all;
+    color: #2d2d2d;
+}
+
+.table td.subject{
+    text-align: left;
+}
+
+.table td.subject:hover{
+    text-decoration: underline;
+}
+
+.table td.subject.important::before{
+    content: "";
+    background-image: url(img/important_notice.png);
+    background-size: cover;
+    display: inline-block;
+    width: 30px; height: 15px;
+    margin-right: 5px;
+}
+
+.contents > .md_ct > .page{
+    display: flex;
+    height: 20px;
+    margin: 70px 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.contents > .md_ct > .page > img{
+    width: 16px; height: 16px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.contents > .md_ct > .page > div{
+    display: flex;
+}
+
+.contents > .md_ct > .page > div > span{
+    width: 30px; height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10px;    
+    padding-bottom: 3px;
+    border-radius: 16px;
+    border: 1px solid #d2d2d2;
+    font-size: 0.9rem;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.contents > .md_ct > .page > div > span:first-child{
+    background-color: #9b0d14;
+    color: white;
+}
+
+.contents > .md_ct > .page > div > span:not(:first-child):hover{
+    background-color: #9b0d1449;
+    color: white;
+}
+
+.site_map{
+    font-size: 1.1rem;
+    font-family: 'Noto Sans KR', sans-serif;
+    background-color: #777777;
+    color: white;
+    letter-spacing: -0.8px;
+}
+
+.site_map > .top{
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.site_map > .top > div{
+    display: flex;
+    flex-direction: column;
+    margin-top: 25px;
+}
+
+.site_map > .top > div > p{
+    font-weight: bold;
+    margin: 0 0 5px 0;
+    padding: 6px;
+    border: 1px solid white;
+    width: 75%;
+    text-align: center;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.site_map > .top > div > p:hover{
+    background-color: white;
+    color: #332E2E;
+    transition: all .3s;
+}
+
+.site_map > .top > div > span{
+    margin: 5px 0;
+}
+
+.site_map > .top > div > span:last-child{
+    color: #c2c2c2;
+    font-size: 0.8rem;
+}
+
+.site_map > .middle{
+    display: flex;
+    width: 80%;
+    margin: 40px auto 0 auto;
+    justify-content: space-between;
+}
+
+.site_map > .middle div{
+    display: flex;
+    flex-direction: column;
+}
+
+.site_map > .middle div > span{
+    color: #c2c2c2;
+    font-size: 0.8rem;
+    cursor: pointer;
+    margin: 5px 0;
+}
+
+.site_map > .middle div > span:first-child{
+    font-size: 1.1rem;
+    color: white;
+    margin: 7px 0;
+}
+
+.site_map > .middle div > span:not(:first-child):hover{
+    text-decoration: underline;
+}
+
+.footer{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 0.8rem;
+    background-color: #444444;
+    color: #c2c2c2;
+}
+
+.footer > .top,
+.footer > .bottom{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.footer > .top{
+    display: flex;
+}
+
+.footer > .top > span{
+    display: block;
+    padding: 20px 0px 10px 0px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.footer > .top > span:hover{
+    text-decoration: underline;
+}
+
+.footer > .top > span:not(:last-child)::after{
+    content: "|";
+    padding: 0 13px;
+}
+
+.footer > .bottom{
+    padding: 15px 0 30px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer > .bottom .bottom_txt{
+    display: flex;
+    flex-direction: column;
+    margin-left: 50px;
+    line-height: 25px;
+}

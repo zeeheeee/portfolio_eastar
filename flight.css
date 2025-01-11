@@ -1,0 +1,478 @@
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+    font-family: 'GmarketSansMedium';
+    width: 100vw;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    color: #332E2E;
+    letter-spacing: -0.8px;
+    box-sizing: border-box;
+}
+
+ul, li{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.contents{
+    background-color: #f9f9f9;
+    padding-bottom: 70px;
+}
+
+.contents > .top_ct{
+    width: 100%; height: 77px;
+}
+
+.contents > .top_ct > .nav{
+    width: 100%; height: 77px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.5s ease;
+    background-color: white;
+}
+
+.contents > .top_ct > .nav > .logo{
+    background-image: url(img/eastar_logo.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 188px; height: 41px;
+    margin: 0 80px 10px 50px;
+    z-index: 3;
+}
+
+.contents > .top_ct > .nav > .nav_wrap{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; height: 0px;
+    opacity: 0;
+    transition: all 0.3s ease;
+    background: rgba( 255, 255, 255, 0.7 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.12 );
+    backdrop-filter: blur( 7.5px );
+    -webkit-backdrop-filter: blur( 7.5px );
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+.contents > .top_ct > .nav > .nav_wrap.is-hover{
+    opacity: .9;
+}
+
+.contents > .top_ct > .nav.is-hover a{
+    color: #332E2E;
+    transition: all 0.5s ease;
+}
+
+.contents > .top_ct > .nav > ul{
+    display: flex;
+    position: relative;
+}
+
+.contents > .top_ct > .nav > ul > li{
+    width: 150px;
+    display: flex;
+    font-weight: bold;
+    font-size: 1.1rem;
+    position: relative;
+    justify-content: center;
+}
+
+.contents > .top_ct > .nav > ul > li > a::after{
+    position: absolute;
+    margin-top: 20px;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    content: "";
+    width: 0; height: 2px;
+    background-color: #332E2E;
+    transition: all .3s;
+}
+
+.contents > .top_ct > .nav > ul > li > ul{
+    display: none;
+}
+
+.contents > .top_ct > .nav > ul > li:hover > a::after{
+    width: 100px;
+    transition: all .3s;
+}
+
+.contents > .top_ct > .nav > ul > li.is-hover > ul{
+    display: block;
+    position: fixed;
+    top: 10%;
+    right: 13%;
+    display: flex;
+    font-size: 1.05rem;
+    margin: 10px 0;
+    transition: all 0.5s ease;
+}
+
+.contents > .top_ct > .nav > ul > li > ul > li{
+    width: 200px;
+    text-align: right;
+}
+
+.contents > .top_ct > .nav > ul > li > ul > li > ul{
+    font-size: 0.9rem;
+    font-weight: 400;
+    margin: 10px 0;
+    color: #474242;
+}
+
+.contents > .top_ct > .nav > ul > li > ul > li > ul > li{
+    margin: 10px 0;
+}
+
+.contents > .top_ct > .nav > ul > li > ul > li > ul > li:hover{
+    text-decoration: underline;
+}
+
+.contents > .md_ct{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.contents > .md_ct > span{
+    display: inline-block;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 50px 0;
+}
+
+.contents > .md_ct > .button{
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.contents > .md_ct > .button > div{    
+    margin-right: 10px;
+    padding: 8px 17px;
+    border: 1px solid #d2d2d2;
+    border-radius: 30px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 0.9rem;
+    font-weight: bold;
+    background-color: white;
+    cursor: pointer;
+}
+
+.contents > .md_ct > .button > div.active{
+    background-color: #D30E18;
+    color: white;
+    font-weight: bold;
+}
+
+.contents > .md_ct > .reservation{
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #d2d2d28e;
+    border-radius: 10px;
+}
+
+.contents > .md_ct > .reservation.multi_city{
+    display: flex;
+    flex-direction: column;
+}
+
+.contents > .md_ct > .reservation > .multi_reservation{
+    width: 100%;
+    display: flex;    
+    justify-content: space-between;
+}
+
+.contents > .md_ct > .reservation > .multi_reservation:not(:first-child){
+    padding-top: 30px;
+}
+
+.contents > .md_ct > .reservation > .multi_reservation:not(:last-child):not(:nth-last-child(2)) {
+    border-bottom: 1px solid #d2d2d28e;
+    padding-bottom: 30px;
+}
+
+.contents > .md_ct > .reservation .location{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 40%;
+    margin-left: 30px;
+}
+
+.contents > .md_ct > .reservation .location > div{
+    margin-right: 50px;
+    cursor: pointer;
+}
+
+.contents > .md_ct > .reservation .location > div:last-child{
+    margin-right: 0;
+}
+
+.contents > .md_ct > .reservation .location > div:not(:nth-child(2)){
+    width: 200px;
+    border-bottom: 1px solid #6d6d6d;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 10px;
+    
+    font-family: 'Noto Sans KR', sans-serif;
+    color: #6d6d6d;
+}
+
+.contents > .md_ct > .reservation .location > div > span:first-child{
+    font-size: 1.1rem;
+    margin-bottom: 7px;
+}
+
+.contents > .md_ct > .reservation .location > div > span:last-child{
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 7px;
+    align-items: center;
+}
+
+.contents > .md_ct > .reservation .more{
+    width: 53%;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.contents > .md_ct > .reservation .more > div{
+    height: 70px;
+    margin: 5px 0;
+    display: flex;
+    padding-left: 30px;
+    align-items: center;
+    background-color: rgba(235, 235, 235, 0.7);
+    border-radius: 10px;
+    color: #6d6d6d;
+}
+
+.contents > .md_ct > .reservation .more > div > .tag{
+    width: 150px;
+}
+
+.contents > .md_ct > .reservation .more > div > .input{
+    border-bottom: 1px solid #6d6d6d8f;
+    padding: 7px 8px;
+    width: 24%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.contents > .md_ct > .reservation .more > .promotion > input{
+    width: 24%; height: 30px;
+    font-family: 'Noto Sans KR', sans-serif;
+    border: 1px solid #d6d3d3;
+    color: #332E2E;
+    border-radius: 5px;
+    padding-left: 13px;
+}
+
+.contents > .md_ct > .reservation #addJourney{
+    width: 100%; height: 55px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 0.9rem;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 1px solid #d6d3d3;
+    background-color: #EFEFEF;
+    margin-top: 30px;
+}
+
+.contents > .md_ct > .search_button{
+    width: 200px; height: 50px;
+    margin: 50px auto 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #D30E18;
+    border-radius: 10px;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.contents > .md_ct > .search_button:active{
+    background-color: #9b0d14;
+}
+
+.contents > .information{
+    width: 76%;
+    margin: 70px auto;
+    background-color: #F0F0F0;
+    border-radius: 10px;
+    padding: 35px;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.contents > .information > span:first-child{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.contents > .information > .info_ct{
+    display: flex;
+    flex-direction: column;
+}
+
+.contents > .information > .info_ct > span{
+    padding: 10px;
+}
+
+.contents > .information > .info_ct > span > span{
+    font-weight: bold;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.site_map{
+    font-size: 1.1rem;
+    font-family: 'Noto Sans KR', sans-serif;
+    background-color: #777777;
+    color: white;
+    letter-spacing: -0.8px;
+}
+
+.site_map > .top{
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.site_map > .top > div{
+    display: flex;
+    flex-direction: column;
+    margin-top: 25px;
+}
+
+.site_map > .top > div > p{
+    font-weight: bold;
+    margin: 0 0 5px 0;
+    padding: 6px;
+    border: 1px solid white;
+    width: 75%;
+    text-align: center;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.site_map > .top > div > p:hover{
+    background-color: white;
+    color: #332E2E;
+    transition: all .3s;
+}
+
+.site_map > .top > div > span{
+    margin: 5px 0;
+}
+
+.site_map > .top > div > span:last-child{
+    color: #c2c2c2;
+    font-size: 0.8rem;
+}
+
+.site_map > .middle{
+    display: flex;
+    width: 80%;
+    margin: 40px auto 0 auto;
+    justify-content: space-between;
+}
+
+.site_map > .middle div{
+    display: flex;
+    flex-direction: column;
+}
+
+.site_map > .middle div > span{
+    color: #c2c2c2;
+    font-size: 0.8rem;
+    cursor: pointer;
+    margin: 5px 0;
+}
+
+.site_map > .middle div > span:first-child{
+    font-size: 1.1rem;
+    color: white;
+    margin: 7px 0;
+}
+
+.site_map > .middle div > span:not(:first-child):hover{
+    text-decoration: underline;
+}
+
+.footer{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 0.8rem;
+    background-color: #444444;
+    color: #c2c2c2;
+}
+
+.footer > .top,
+.footer > .bottom{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.footer > .top{
+    display: flex;
+}
+
+.footer > .top > span{
+    display: block;
+    padding: 20px 0px 10px 0px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.footer > .top > span:hover{
+    text-decoration: underline;
+}
+
+.footer > .top > span:not(:last-child)::after{
+    content: "|";
+    padding: 0 13px;
+}
+
+.footer > .bottom{
+    padding: 15px 0 30px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer > .bottom .bottom_txt{
+    display: flex;
+    flex-direction: column;
+    margin-left: 50px;
+    line-height: 25px;
+}
