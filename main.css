@@ -1138,6 +1138,16 @@ footer.tablet > .tb_ft_sns > .sns_img > img:hover{
 
     .bt_ct > .bt_banner > .event, .bt_ct > .bt_banner > .service{
         width: 100%;
+        height: auto;
+    }
+
+    .bt_ct > .bt_banner > .service .service_ct{
+        height: 400px;
+    }
+
+    .bt_ct > .bt_banner > .event, .bt_ct > .bt_banner > .service .service_ct div {
+        width: 100%;
+        background-position: top left;
     }
 
     .bt_ct > .bt_banner > .event > .event_slider > .autoplay{
@@ -1146,7 +1156,7 @@ footer.tablet > .tb_ft_sns > .sns_img > img:hover{
 
     .bt_ct > .bt_banner > .event > .event_slider > .autoplay .event_ct{
         width: 100%;
-        height: auto !important;
+        height: auto;
     }
 
     .bt_ct > .bt_banner > .event > .event_slider > .autoplay .event_ct img{
@@ -1180,5 +1190,9 @@ footer.tablet > .tb_ft_sns > .sns_img > img:hover{
 
     .md_ct > .news > .news_right > .news_ct > .news_date{
         font-size: 0.8rem;
+    }
+    
+    .bt_ct > .bt_banner > .service .service_ct{
+        height: 200px;
     }
 }
